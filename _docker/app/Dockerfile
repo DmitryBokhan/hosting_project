@@ -20,14 +20,14 @@ COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 RUN groupadd -g 1000 myuser && \
     useradd -u 1000 -g myuser -m myuser
 
-# Переключаемся на этого пользователя
-USER myuser
-
 #Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
+
+# Переключаемся на этого пользователя
+USER myuser
 
 WORKDIR /var/www
 
