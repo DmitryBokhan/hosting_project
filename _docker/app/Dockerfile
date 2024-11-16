@@ -20,6 +20,7 @@ COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 #RUN groupadd -g 1000 myuser && \
 #    useradd -u 1000 -g myuser -m myuser
 
+
 # Переключаемся на этого пользователя
 #USER myuser
 
