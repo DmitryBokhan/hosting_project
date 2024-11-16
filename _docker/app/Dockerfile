@@ -17,17 +17,17 @@ RUN apt-get update && apt-get install -y \
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
 # Создаём пользователя с указанными UID и GID
-RUN groupadd -g 1000 myuser && \
-    useradd -u 1000 -g myuser -m myuser
+#RUN groupadd -g 1000 myuser && \
+#    useradd -u 1000 -g myuser -m myuser
+
+# Переключаемся на этого пользователя
+#USER myuser
 
 #Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
     --install-dir=/usr/local/bin
-
-# Переключаемся на этого пользователя
-USER myuser
 
 WORKDIR /var/www
 
