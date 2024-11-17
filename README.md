@@ -4,7 +4,10 @@ https://www.youtube.com/watch?v=SX-f0n4fdYI&list=PLd2_Os8Cj3t9Ert8mBlNl1UqwllyP1
 - docker-compose down
 - docker-compose up -d
 
-- docker-compose up -d --build 
+- docker-compose -f docker-compose.yml up -d --build  (для локалки)
+- docker-compose -f docker-compose.dev.yml up -d --build  (для Production)
+
+- docker-compose up -d --build  (пересобрать контейнер)
 
 #### Зайти в контейнер
 - sudo docker exec -it project_app bash 
@@ -22,4 +25,13 @@ sudo chmod 777 -R ./
 ## CI/CD GitHib
 
 Переменные:
-https://docs.github.com/ru/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables
+- https://docs.github.com/ru/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables
+- https://www.youtube.com/watch?v=zn5T7FkpaTA 
+
+
+##github runner
+
+Устанавливаем на нашу VM
+
+
+./run.sh
