@@ -29,4 +29,19 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Show custom var
-        run: echo "Кастомная переменная:${{ vars.SOME }}"
+        run:
+          echo ${{ vars.DB_CONNECTION }}
+          echo ${{ vars.DB_HOST }}
+          echo ${{ vars.DB_PORT }}
+          echo ${{ vars.DB_DATABASE }}
+          echo ${{ vars.DB_USERNAME }}
+          echo ${{ vars.DB_PASSWORD }}
+          echo ${{ vars.DB_CONNECTION }}
+          echo ${{ vars.APP_NAME }}
+          echo ${{ vars.APP_ENV }}
+          echo ${{ vars.APP_KEY }}
+          echo ${{ vars.APP_DEBUG }}
+          echo ${{ vars.APP_TIMEZONE }}
+          echo ${{ vars.APP_URL }}
+
+
