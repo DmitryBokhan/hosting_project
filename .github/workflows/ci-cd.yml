@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up Docker Compose
-        run: echo "repository:$GITHUB_REPOSITORY"
+        run: echo $SOME_VAR
 
   test2:
     runs-on: ubuntu-latest
