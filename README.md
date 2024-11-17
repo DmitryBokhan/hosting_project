@@ -16,3 +16,10 @@ sudo chmod 777 -R ./
 
 - docker logs project_app 
 - docker ps
+
+
+
+## CI/CD GitHib
+
+Переменные:
+https://docs.github.com/ru/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables
