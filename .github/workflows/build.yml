@@ -8,6 +8,11 @@ jobs:
     steps:
       - name: Check Docker Permissions
         run: ls -l /var/run/docker.sock
+      - name: Check Docker Daemon Access
+        run: |
+           whoami
+           groups
+           ls -l /var/run/docker.sock
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
