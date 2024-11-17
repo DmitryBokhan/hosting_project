@@ -6,7 +6,7 @@ services:
         volumes:
             - ./:/var/www
             - ./_docker/nginx/conf.d:/etc/nginx/conf.d
-            - ./_docker/ssl_certificate
+            - ./_docker/nginx/ssl:/etc/nginx/ssl
         ports:
             - 80:80
             - 443:443
