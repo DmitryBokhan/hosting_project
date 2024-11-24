@@ -5,7 +5,7 @@ services:
         image: nginx:latest
         volumes:
             - ./:/var/www
-            - ./_docker/nginx/conf.d:/etc/nginx/conf.d
+            - ./_docker/nginx/conf.dev.d:/etc/nginx/conf.d
         ports:
             - 8878:80
         depends_on:
